@@ -8,7 +8,6 @@
 !/public/plugins/index.php
 /public/themes/*/assets
 /public/upgrade
-/public/uploads
 /public/wordpress
 /vendor
 auth.json
