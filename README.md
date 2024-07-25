@@ -45,7 +45,7 @@ To use BrowserSync with your WordPlate project, follow these steps:
 
 ```js
 module.exports = {
-    proxy: "localhost:8000", // Replace with your PHP server port
+    proxy: "127.0.0.1:8000", // Replace with your PHP server port
     files: ["public/**/*.php", "resources/**/*.php", "public/**/*.css", "public/**/*.js"],
     notify: false
 };
