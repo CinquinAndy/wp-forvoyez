@@ -10,6 +10,25 @@
     "require": {
         "php": "^8.2",
         "composer/installers": "^2.2",
+        "koodimonni-language/core-fr_fr": "^4.8",
+        "koodimonni-language/core-es_es": "^4.8",
+        "koodimonni-language/core-de_de": "^4.8",
+        "koodimonni-language/core-it_it": "^4.8",
+        "koodimonni-language/core-nl_nl": "^4.8",
+        "koodimonni-language/core-ru_ru": "^4.8",
+        "koodimonni-language/core-pt_pt": "^4.8",
+        "koodimonni-language/core-pt_br": "^4.8",
+        "koodimonni-language/core-ja": "^4.8",
+        "koodimonni-language/core-zh_cn": "^4.8",
+        "koodimonni-language/core-zh_tw": "^4.8",
+        "koodimonni-language/core-ko_kr": "^4.8",
+        "koodimonni-language/core-ar": "^4.8",
+        "koodimonni-language/core-pl_pl": "^4.8",
+        "koodimonni-language/core-sv_se": "^4.8",
+        "koodimonni-language/core-tr_tr": "^4.8",
+        "koodimonni-language/core-da_dk": "^4.8",
+        "koodimonni-language/core-fi": "^4.8",
+        "koodimonni-language/core-nb_no": "^4.8",
         "roots/bedrock-autoloader": "^1.0.4",
         "roots/wordpress": "^6.5.4",
         "roots/wp-password-bcrypt": "^1.1",
@@ -30,6 +49,10 @@
                 "wpackagist-plugin/*",
                 "wpackagist-theme/*"
             ]
+        },
+        {
+            "type": "composer",
+            "url": "https://wp-languages.github.io"
         }
     ],
     "minimum-stability": "stable",
@@ -42,7 +65,8 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
-            "roots/wordpress-core-installer": true
+            "roots/wordpress-core-installer": true,
+            "koodimonni/composer-dropin-installer": true
         },
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -61,7 +85,12 @@
                 "type:wordpress-theme"
             ]
         },
-        "wordpress-install-dir": "public/wordpress"
+        "wordpress-install-dir": "public/wordpress",
+        "dropin-paths": {
+            "public/languages/": [
+                "vendor:koodimonni-language"
+            ]
+        }
     },
     "scripts": {
         "post-root-package-install": [

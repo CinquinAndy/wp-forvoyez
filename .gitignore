@@ -10,3 +10,5 @@ node_modules
 public/wordpress
 public/mu-plugins/*
 public/plugins/*
+htdocs
+public/languages

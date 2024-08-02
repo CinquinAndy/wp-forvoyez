@@ -83,6 +83,7 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', sprintf('%s/%s/', __DIR__, env('WP_DIR', 'wordpress')));
 }
 
+define('FS_METHOD', 'direct');
 // Set the database table prefix.
 $table_prefix = env('DB_TABLE_PREFIX', 'wp_');
 
